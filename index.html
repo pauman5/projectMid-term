@@ -1,180 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Circle</title>
-        <link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle</title>
+    <link rel="stylesheet" href="style.css">
 
-        <!--Google Fonts-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-
-    </head>
-    <body>
-        <div class="general">
-            <nav class="container-nav">
-                <div>
-                    <img class= "circle-logo" src="/images/circle.svg" alt="circle logo">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="general">
+        <nav class="container-nav">
+            <div>
+                <img class= "circle-logo" src="/images/circle.svg" alt="circle logo">
+            </div>
+            <div>
+                <ul class="nav-menu">
+                    <li><a class="selected">Home</a></li>
+                    <li><a>Projects</a></li>
+                    <li><a>Services</a></li>
+                </ul>
+            </div>
+            <div>
+                <button class="button1">Contact Us</button>
+                <button class="hamburger">
+                    <i class="menuIcon"></i>
+                    <i class="closeIcon"></i>
+                </button>
+            </div>
+        </nav>
+        <div class="hamburguer-menu">
+            <ul class="menu">
+                <li><a class="menuItem selected" href="#">Home</a></li>
+                <li><a class="menuItem" href="#">Projects</a></li>
+                <li><a class="menuItem" href="#">Services</a></li>
+            </ul>
+        </div>
+        <section id="empower">
+            <div class="empower-top">
+                <div class="container-empower-text">
+                    <div class="empower-texts">
+                        <h1>Empower Your Business With Stunning Design!</h1>
+                        <p>Circle is a digital design and development studio.We design and develop astonishing websites and mobile apps.</p>
+                    </div>
+                    <div>
+                        <a href="#" class="seeOurWork">See our work</a>
+                        <button class="button1">Get in touch</button>
+                    </div>
                 </div>
-                <div>
-                    <ul class="nav-menu">
-                        <li><a class="selected">Home</a></li>
-                        <li><a>Projects</a></li>
-                        <li><a>Services</a></li>
+                <div class="container-empower-pictures">
+                    <div class="container-card"><img src="/images/card-1.png" alt="credir-card" /></div>
+                    <img src="/images/hero-image.png" alt="happy man">
+                    <div class="container-okey"><img src="/images/card-2.png" alt="okey-emoji" /></div>
+                </div>
+            </div>
+            <div class="empower-bottom">
+                <div class="brand-logo">
+                    <img src="/images/airbnb-logo.svg" alt="Airbnb">
+                </div>
+                <div class="brand-logo">
+                    <img src="/images/google-logo.svg" alt="Google">
+                </div>
+                <div class="brand-logo">
+                    <img src="/images/microsoft-logo.svg" alt="Microsoft">
+                </div>
+                <div class="brand-logo">
+                    <img src="/images/fedex-logo.svg" alt="FedEx">
+                </div>
+                <div class="amazon">
+                    <img src="/images/amazon-logo.svg" alt="Amazon">
+                </div>
+                
+            </div>
+        </section>
+        <section id="recent-projects">
+            <h3>Recent Projects</h3>
+            <div >
+                <div class="container-project">
+                    <img src="/images/1.jpg" alt="simplify" class="project-img">
+                    <div>
+                        <h4>Simplify</h4>
+                        <p>UI Design & App Development</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="container-project">
+                    <img src="/images/2.jpg" alt="dashcoin" class="project-img">
+                    <div>
+                        <h4>Dashcoin</h4>
+                        <p>Web Development</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="container-project">
+                    <img src="/images/3.jpg" alt="vectorify" class="project-img">
+                    <div>
+                        <h4>Vectorify</h4>
+                        <p>User Experience Design</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="hear">
+            <div class="lateral">
+                <img src="/images/memoji-1.png" alt="em-cross-fingers" class="emojis">
+                <img src="/images/memoji-3.png" alt="em-okey" class="emojis">
+            </div>
+            <div class="central">
+                <h3 class="h3-central">Hear What Our Clients Have to Say</h4>
+                <h4 class="h4-central">"Circle helped us through every stage of our startup. We really enjoyed working with you."</p>
+                <div class="perfil-central">
+                    <div>
+                        <picture class="profile"></picture> 
+                    </div>
+                    <div>
+                        <p class="hear-name">Kristin Watson</p>
+                        <p class="hear-web">Booking.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lateral">
+                <img src="/images/memoji-4.png" alt="em-party" class="emojis">
+                <img src="/images/memoji-2.png" alt="em-wink" class="emojis">
+            </div> 
+        </section>
+        <section id="services">
+            <h3>Our Services</h3>
+            <div>
+                <div class="service-container">
+                    <picture class="icon-1"></picture>
+                    <h5>User Interface Design</h5>
+                    <p>Circle provides you with a stunning user interface design that is accessible to everyone.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="service-container">
+                    <picture class="icon-2"></picture>
+                    <h5>User Experience Design</h5>
+                    <p>Circle always focuses on delivering the best user experience to your customers.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="service-container">
+                    <picture class="icon-3"></picture>
+                    <h5>Application Development</h5>
+                    <p>We develop high-quality mobile and web applications using the latest technology stack.</p>
+                    <a href="#">Learn More</a>
+                </div>     
+            </div>       
+        </section>
+        <section id="questions">
+            <h3>Do you have any questions?</h3>
+            <p>Let us help you!</p>
+            <div>
+                <form action="">
+                    <div class="formulario">
+                        <img src="/images/mail.svg" alt="card">
+                        <input type="email" placeholder="Enter your mail">
+                    </div>
+                    <button class="button1" type="submit">Subscribe</button>
+                </form>
+            </div>           
+        </section>
+        <footer>
+            <div>
+                <img src="/images/circle.svg" alt="circle">
+                <p>2972 Westheimer Rd. Santa Ana,<br> Illinois 85486</p>
+            </div>
+            <div class="lista-footer">
+                <div >
+                    <ul>
+                        <li>Team</li>
+                        <li>Services</li>
+                        <li>About Us</li>
                     </ul>
                 </div>
                 <div>
-                    <button class="button1">Contact Us</button>
-                </div>
-            </nav>
-            <section id="empower">
-                <div class="empower-top">
-                    <div class="container-empower">
-                        <div>
-                            <h1>Empower Your Business With Stunning Design!</h1>
-                            <p>Circle is a digital design and development studio.<br>We design and develop astonishing websites and mobile apps.</p>
-                        </div>
-                        <div>
-                            <a href="#" class="seeOurWork">See our work</a>
-                            <button class="button1">Get in touch</button>
-                        </div>
-                    </div>
-                    <div class="container-empower">
-                        <div class="container-card"><img src="/images/card-1.png" alt="credir-card" /></div>
-                        <img src="/images/hero-image.png" alt="happy man">
-                        <div class="container-okey"><img src="/images/card-2.png" alt="okey-emoji" /></div>
-                    </div>
-                </div>
-                <div class="empower-bottom">
-                    <div>
-                        <img src="/images/airbnb-logo.svg" alt="Airbnb">
-                    </div>
-                    <div>
-                        <img src="/images/google-logo.svg" alt="Google">
-                    </div>
-                    <div>
-                        <img src="/images/microsoft-logo.svg" alt="Microsoft">
-                    </div>
-                    <div>
-                        <img src="/images/fedex-logo.svg" alt="FedEx">
-                    </div>
-                    <div>
-                        <img src="/images/amazon-logo.svg" alt="Amazon">
-                    </div>
-                    
-                </div>
-            </section>
-            <section id="recent-projects">
-                <h3>Recent Projects</h3>
-                <div >
-                    <div class="container-project">
-                        <img src="/images/1.jpg" alt="simplify" class="project-img">
-                        <div>
-                            <h4>Simplify</h4>
-                            <p>UI Design & App Development</p>
-                            <a href="#">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="container-project">
-                        <img src="/images/2.jpg" alt="dashcoin" class="project-img">
-                        <div>
-                            <h4>Dashcoin</h4>
-                            <p>Web Development</p>
-                            <a href="#">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="container-project">
-                        <img src="/images/3.jpg" alt="vectorify" class="project-img">
-                        <div>
-                            <h4>Vectorify</h4>
-                            <p>User Experience Design</p>
-                            <a href="#">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="hear">
-                <div class="lateral">
-                    <img src="/images/memoji-1.png" alt="em-cross-fingers" class="emojis">
-                    <img src="/images/memoji-3.png" alt="em-okey" class="emojis">
-                </div>
-                <div class="central">
-                    <h3 class="h3-central">Hear What Our Clients Have to Say</h4>
-                    <h4 class="h4-central">"Circle helped us through every stage of our startup. We really enjoyed working with you."</p>
-                    <div class="perfil-central">
-                        <div>
-                            <picture class="profile"></picture> 
-                        </div>
-                        <div>
-                            <p class="hear-name">Kristin Watson</p>
-                            <p class="hear-web">Booking.com</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lateral">
-                    <img src="/images/memoji-4.png" alt="em-party" class="emojis">
-                    <img src="/images/memoji-2.png" alt="em-wink" class="emojis">
-                </div> 
-            </section>
-            <section id="services">
-                <h3>Our Services</h3>
-                <div>
-                    <div class="service-container">
-                        <picture class="icon-1"></picture>
-                        <h5>User Interface Design</h5>
-                        <p>Circle provides you with a stunning user interface design that is accessible to everyone.</p>
-                        <a href="#">Learn More</a>
-                    </div>
-                    <div class="service-container">
-                        <picture class="icon-2"></picture>
-                        <h5>User Experience Design</h5>
-                        <p>Circle always focuses on delivering the best user experience to your customers.</p>
-                        <a href="#">Learn More</a>
-                    </div>
-                    <div class="service-container">
-                        <picture class="icon-3"></picture>
-                        <h5>Application Development</h5>
-                        <p>We develop high-quality mobile and web applications using the latest technology stack.</p>
-                        <a href="#">Learn More</a>
-                    </div>     
+                    <ul>
+                        <li>Press</li>
+                        <li>Projects</li>
+                        <li>Privacy Policy</li>
+                    </ul>
                 </div>       
-            </section>
-            <section id="questions">
-                <h3>Do you have any questions?</h3>
-                <p>Let us help you!</p>
-                <div>
-                    <form action="">
-                        <div class="formulario">
-                            <img src="/images/mail.svg" alt="card">
-                            <input type="email" placeholder="Enter your mail">
-                        </div>
-                        <button class="button1" type="submit">Subscribe</button>
-                    </form>
-                </div>           
-            </section>
-            <footer>
-                <div>
-                    <img src="/images/circle.svg" alt="circle">
-                    <p>2972 Westheimer Rd. Santa Ana,<br> Illinois 85486</p>
-                </div>
-                <div class="lista-footer">
-                    <div >
-                        <ul>
-                            <li>Team</li>
-                            <li>Services</li>
-                            <li>About Us</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>Press</li>
-                            <li>Projects</li>
-                            <li>Privacy Policy</li>
-                        </ul>
-                    </div>       
-                </div>
-            </footer>
-        </div>
-    </body>
+            </div>
+        </footer>
+    </div>
+</body>
 </html>

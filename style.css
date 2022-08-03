@@ -1,6 +1,9 @@
 html,
 body {
-    padding: 0,
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
     margin: 0;
     background-color: #f2f4fc;
     font-family: 'Roboto';
@@ -18,7 +21,7 @@ h1{
 h3 {
     color: #292e47;
     font-size: 40px;
-    margin: 3rem 0 3rem 2rem;
+    margin: 3rem 0;
 }
 
 h5 {
@@ -112,6 +115,15 @@ p {
     border: 0;
 }
 
+.hamburger {
+    display: none;
+}
+
+.hamburguer-menu{
+    display: none;
+}
+
+
 .seeOurWork {
     color: #6B708D;
 }
@@ -136,8 +148,12 @@ p {
     margin-bottom: 3rem;
 }
 
-.container-empower {
+.container-empower-pictures {
     position:relative;
+    width: 50%;
+}
+
+.container-empower-text {
     width: 50%;
 }
 
@@ -161,11 +177,11 @@ p {
     width: 19em;
 }
 
-.container-empower > img {
+.container-empower-pictures > img {
     width: 100%;
 }
 
-.container-empower a {
+.container-empower-text a {
     rgb(107, 112, 141);
     text-decoration: none;
     padding-right: 1em;
@@ -229,7 +245,6 @@ p {
 .project-img {
     width: 100%;
     height: 240px;
-    -o-object-fit: 
 }
 
 #hear {
@@ -634,34 +649,65 @@ color: #6B708D;
     font-weight: 400;
 }
 
-@media screen and (max-width: 1200px) {
+@media only screen and (max-width: 1250px) {
 
-    h1{
-        font-size: 50px;
-        font-weight: 700;
-        letter-spacing: 1.3px;
-        line-height: 110%;
+    #empower {
+        max-width: 1100px;
+        margin: 0 auto 3rem auto;
     }
 
     #empower h1{
-        line-height: 65px;
-        color: #292e47;
+        text-align: center;
     }
 
     #empower p {
+        max-width: 600px;
         font-weight: 400;
         font-size: 17px;
         line-height: 150%;
         color: #6B708D;
         margin-bottom: 3rem;
+        text-align: center;
     }
 
-    .container-card{
-        display: none;
+    .empower-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width-max: 1100px;
     }
 
-    .container-okey {
-       display: none;
+    .container-empower-pictures {
+        position:relative;
+        width: 80%;
+    }
+
+    .container-card img {
+        width: 22em;
+    }
+
+    .container-okey img {
+        width: 22em;
+    }
+    
+    .container-empower-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 85%;
+        margin-bottom: 4rem;
+    }
+
+    .empower-texts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .empower-bottom {
+        
+        padding: 5em 2em 1rem 2em;
     }
 
     .service-container {
@@ -695,11 +741,282 @@ color: #6B708D;
         line-height: 115%;
         font-weight: 500;
     }
-     
+
+    .h3-central { 
+        max-width: 450px;
+        color: white; 
+        font-size: 34px; 
+        text-align: center;
+    }
+    
+    .h4-central { 
+        max-width: 560px;
+        color: #ffc600;
+        font-size: 20px; 
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .emojis {
+        height: 150px;
+        width: 150px;
+    }
 }
 
-@media screen and (max-width: 900px) {     
+@media only screen and (max-width: 950px) {
+
+    .nav-menu {
+        display: none;
+    }
+
+    .container-nav .button1 {
+        display: none;
+    }
+
+    .hamburger {
+        border: none;
+        cursor: pointer;
+    }
+
+    .menu {
+        position: fixed;
+        transform: translateY(-100%);
+        transition: transform 0.2s;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 99;
+        background: #C8C8C8;
+        color: white;
+        list-style: none;
+        padding-top: 4rem;
+      }
+
+    h1{
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: 1.3px;
+        line-height: 110%;
+    }
+
+    #empower {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .empower-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #empower h1{
+        letter-spacing: 1.3px;
+        line-height: 100%;
+        text-align: center;
+        color: #292e47;
+    }
+
+    .container-card {
+        display: none;
+    }
+
+    .container-okey {
+       display: none;
+    }
+
+    .amazon {
+        display: none;
+    }
+
+    .brand-logo {
+        display: flex;
+        width: 30%;
+        margin: 10%;
+    }
+
+    .empower-bottom {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 5em 2em 1rem 2em;
+    }
+
+    .service-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        background-color: white;
+        box-shadow: 0px 39px 78px rgba(0, 0, 0, 0.1);
+        width: 28%;
+        padding: 1rem;
+    }
+    
+    .service-container p {
+        color: #6B708D;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+    }
+    
+    .service-container a {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        color: #072AC8;
+    }
+
+    h5 {
+        margin: 30px 0 20px 0;
+        font-size: 18px;
+        line-height: 115%;
+        font-weight: 500;
+    }
+    
+    .emojis {
+        display: none;
+    }
+
+    .h3-central { 
+        max-width: 85%;
+        font-size: 40px; 
+    }
+    
+    .h4-central { 
+        max-width: 90%;
+        font-weight: 500;
+    }
+
+    #recent-projects {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h3 {
+        color: #292e47;
+        font-size: 40px;
+        margin: 3rem 0 3rem 0
+    }
+
+    #recent-projects > div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .container-project {
+        width: 100%;
+        box-shadow: 0px 39px 78px rgba(0, 0, 0, 0.1);
+    }
+
+    #services {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #services > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-container {
+        width: 65%;
+        padding: 3rem;
+        margin: 1rem;
+    }
+
+    #questions h3 {
+        text-align: center;
+    }
+
+    #questions > div > form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formulario {
+        margin-right: 0;
+        width: 75%;
+    }
+
+    #questions > div > form > button {
+        height: 80px;
+        margin-top: 1rem;
+        width: 80%;
+    }
 }
 
-@media screen and (max-width: 420px) {     
-}
+@media only screen and (max-width: 480px) {
+
+    .container-empower-text > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .seeOurWork {
+        margin: 0;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    #empower p {
+        min-width: 0;
+    }
+
+    #hear {
+        padding: 1.5rem 2em;
+    }
+
+    .h3-central { 
+        max-width: 80%;
+        font-size: 25px;
+        margin: 1rem 0;
+    }
+    
+    .h4-central { 
+        max-width: 85%;
+        font-weight: 400;
+        font-size: 20px;
+        margin: 1rem 0;  
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0rem 0;
+        margin-top: 0;
+    }
+    
+    footer img {
+        width: 100px;
+        margin-bottom: 30px;
+    }
+    
+    footer div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+    }
+    
+    footer p {
+        text-align: center;
+    }
+    
+    footer li {
+        font-size: 17px;
+        list-style: none;
+        padding: 0 0.8rem;
+        color: #6B708D;
+    } 
+    
+} 
