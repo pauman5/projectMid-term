@@ -31,7 +31,7 @@ sendButton.onclick = (e) => {
   let phone = document.getElementsByTagName("input")[2].value;
   let message = document.getElementsByTagName("textarea")[0].value;
 
-  if (!name || !email || !phone ) {
+  if (!name || !email || !message ) {
     error.innerHTML = `Formulario incompleto: <br> Has de rellenar todos los campos que son obligatorios para poder enviar el formulario! (*).`;
     console.log("error 02: inputs obligatorios vacios");
   } else {
@@ -48,15 +48,20 @@ sendButton.onclick = (e) => {
       },
       body: JSON.stringify({ title: name, body: message, userId: phone }),
     })
-    .then((response) => response.json())
+    .then((response) => 
+    {
+      response.json();
+      console.log(`Estado de respuesta del POST:`, response.status);
+      if (response.status === 201) {
+        error.innerHTML = `Consulta enviada con exito!<br>Recibira una respuesta en los proximos dias.`;
+      }
+    })
     .then((dataDeFormulario) => {
       console.log(dataDeFormulario);
     });
-    name = "";
-    email = "";
-    phone = "";
-    message = "";
-    error.innerHTML = `Consulta enviada con exito!<br>Recibira una respuesta en los proximos dias.`;
   }
-    
-  }
+  name = "";
+  email = "";
+  phone = "";
+  message = "";
+}
