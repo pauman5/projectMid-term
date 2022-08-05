@@ -19,30 +19,29 @@ function toggleMenu() {
 
 hamburger.addEventListener("click", toggleMenu);
 
-/// Accediendo a los datos de la API
+// Accediendo a los datos de la API
 
-fetch("https://jsonplaceholder.typicode.com/posts")
-  .then((response) => response.json())
-  .then((data) => {
-    data.forEach((project) => {
-      const idProject = project.id;
-      const titleProject = project.title;
-      const textProject = project.body;
-      var projects = document.querySelectorAll("container-project");
-
-      projects.forEach((project) => {
-        project.innerHTML = `
-        <img src="/images/${idProject}.jpg" alt="vectorify" class="project-img">
-        <div>
-          <h4>${titleProject}</h4>
-          <p>${titleProject}</p>
-          <a href="singleProject.html/${idProject}">Learn More</a>
-        </div>            
-        `;
+function dataApi() {
+  fetch("https://jsonplaceholder.typicode.com/posts")
+    .then((response) => response.json())
+    .then((data) => {
+      let projectsData = "";
+      data.forEach((project) => {
+        if (project.id <= 3) {
+          projectsData += `
+            <div class="container-project">
+              <img src="/images/${project.id}.jpg" alt="simplify" class="project-img">
+              <div>
+                <h4>${project.title}</h4>
+                <p>${project.title}</p>
+                <a href="singleProject.html">Learn More</a>
+              </div>
+            </div>           
+            `;
+        };
       });
+      document.getElementById("projectsHome").innerHTML = projectsData;
     });
-  })
-  .catch((err) => console.log(err));
+}
 
-/// Accediendo a los datos de la API
-
+dataApi();
